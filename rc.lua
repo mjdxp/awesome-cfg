@@ -594,6 +594,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 --Autostart commands
 --awful.spawn.with_shell()
 awful.spawn.with_shell("compton")
+awful.spawn.with_shell("/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1")
 --awful.spawn.--with_shell("nitrogen --restore")
 
 beautiful.useless_gap = 3
