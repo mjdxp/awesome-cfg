@@ -2,6 +2,9 @@
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
+--Collision
+require("collision")()
+
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -250,9 +253,9 @@ root.buttons(gears.table.join(
 globalkeys = gears.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+    awful.key({ modkey,           }, ",",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+    awful.key({ modkey,           }, ".",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
@@ -303,6 +306,8 @@ globalkeys = gears.table.join(
               {description = "open nemo", group = "launcher"}),
     awful.key({ modkey,           }, "r", function () awful.spawn("rofi -show run") end,
               {description = "open rofi", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "s", function () awful.spawn("gnome-screenshot") end,
+              {description = "take screenshot", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -498,9 +503,16 @@ awful.rules.rules = {
           "Kruler",
           "MessageWin",  -- kalarm.
           "Sxiv",
-          "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
+--          "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
           "Wpa_gui",
           "veromix",
+          "Galculator",
+          "Onboard",
+          "File-roller",
+          "xclock",
+          "xeyes",
+          "xcalc",
+          "webapp-manager",
           "xtightvncviewer"},
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client
