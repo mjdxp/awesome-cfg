@@ -321,7 +321,7 @@ globalkeys = gears.table.join(
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "`", function () awful.spawn("mousepad .config/awesome/rc.lua") end,
               {description = "open config", group = "launcher"}),
-    awful.key({ modkey,           }, "i", function () awful.spawn("firefox") end,
+    awful.key({ modkey,           }, "i", function () awful.spawn("x-www-browser") end,
               {description = "open Firefox", group = "launcher"}),
     awful.key({ modkey,           }, "d", function () awful.spawn("discord") end,
               {description = "open Discord", group = "launcher"}),
