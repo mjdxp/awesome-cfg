@@ -1,6 +1,6 @@
 # awesome-cfg
 
-My personal configuration and theme for Awesome WM.
+My personal configuration and theme for Awesome WM, based on the default config with Collision added.
 
 Clone this repository with `git clone https://github.com/mjdxp/awesome-cfg.git` and copy the files to `~/.config/awesome.`
 
